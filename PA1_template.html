@@ -196,7 +196,8 @@ $(document).ready(function () {
 <div id="loading-and-preprocessing-the-data" class="section level2">
 <h2>Loading and preprocessing the data</h2>
 <p>First, we read the raw data from the <code>activity.csv</code> file and save them to the data frame <code>acitivty</code>. Note that, the data in the second column <code>date</code> is reset to the <code>as.Date</code>-format.</p>
-<pre class="r"><code>activity &lt;- read.csv(&quot;activity.csv&quot;, header = TRUE)
+<pre class="r"><code>unzip(&quot;activity.zip&quot;)
+activity &lt;- read.csv(&quot;activity.csv&quot;, header = TRUE)
 activity[, 2] &lt;- as.Date(activity$date)</code></pre>
 <p>The data frame looks now as follows:</p>
 <pre class="r"><code>str(activity)</code></pre>

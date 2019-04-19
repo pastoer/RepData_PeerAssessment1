@@ -12,6 +12,7 @@ First, we read the raw data from the `activity.csv` file and save them to the da
 
 
 ```r
+unzip("activity.zip")
 activity <- read.csv("activity.csv", header = TRUE)
 activity[, 2] <- as.Date(activity$date)
 ```

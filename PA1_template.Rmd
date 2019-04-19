@@ -11,6 +11,7 @@ First, we read the raw data from the `activity.csv` file and save them to the da
 `acitivty`. Note that, the data in the second column `date` is reset to the `as.Date`-format.
 
 ```{r read, echo = TRUE}
+unzip("activity.zip")
 activity <- read.csv("activity.csv", header = TRUE)
 activity[, 2] <- as.Date(activity$date)
 ```
